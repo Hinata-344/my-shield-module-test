@@ -1,0 +1,41 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+
+/{
+keymap {
+        compatible = "zmk,keymap";
+        default-layer = 0;
+
+        layers {
+            l1 {
+                bindings = <
+                    &kp ESC &kp Q &kp W &kp E &kp R &kp T &trans &trans &kp Y &kp U &kp I &kp O &kp P &kp BSPC
+                    &kp TAB &kp A &kp S &kp D &kp F &kp G &trans &trans &kp H &kp J &kp K &kp L &kp SEMI &kp ENTER
+                    &kp LGUI &kp Z &kp X &kp C &kp V &kp B &kp LSHFT &kp LSHFT &kp N &kp M &kp COMMA &kp DOT &kp SLASH &kp QUOTE
+                >;
+            };
+            l2 {
+                bindings = <
+                    &none &none &none &kp 1 &kp 2 &kp 3 &trans &trans &kp 0 &kp MINS &kp EQUAL &none &none &none
+                    &none &none &none &kp 4 &kp 5 &kp 6 &trans &trans &kp LBKT &kp RBKT &kp BSLS &none &none &none
+                    &none &none &none &kp 7 &kp 8 &kp 9 &trans &trans &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6
+                >;
+            };
+            l3 {
+                bindings = <
+                    &kp GRAVE &kp EXCL &kp AT &kp HASH &kp DLLR &kp PERC &trans &trans &kp AMPS &kp ASTRK &kp LPAR &kp RPAR &kp UNDER &kp DEL
+                    &none &none &none &none &none &none &trans &trans &none &none &none &none &none &none
+                    &none &none &none &none &none &none &trans &trans &none &none &none &none &none &none
+                >;
+            };
+            l4 {
+                bindings = <
+                    &none &none &none &none &none &none &trans &trans &none &none &none &none &none &none
+                    &none &none &none &none &none &none &trans &trans &none &none &none &none &none &none
+                    &none &none &none &none &none &none &trans &trans &none &none &none &none &none &none
+                >;
+            };
+        };
+    };
+};
+};
