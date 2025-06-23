@@ -1,5 +1,9 @@
 #include "my_keyboard.dtsi"
 
+&default_transform {
+    col-offset = <7>;
+};
+
 &kscan0 {
     compatible = "zmk,kscan-gpio-matrix";
     diode-direction = "row2col";  // 必要に応じて col2row に変更
