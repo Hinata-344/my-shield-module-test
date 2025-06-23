@@ -1,5 +1,6 @@
 
 #include <dt-bindings/zmk/matrix_transform.h> // Put this with the other includes at the top of your dtsi
+#include "sparkle-layouts.dtsi"
 / {
     kscan0: kscan0 {
         compatible = "zmk,kscan-gpio-matrix";
