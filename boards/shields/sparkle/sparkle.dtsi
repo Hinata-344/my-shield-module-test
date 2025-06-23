@@ -56,3 +56,10 @@
         };
     };
 };
+
+/ {
+    chosen {
+        zmk,physical-layout = &physical_layout0;
+        // その他の chosen 項目
+    };
+};
