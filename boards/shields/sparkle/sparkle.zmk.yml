@@ -1,0 +1,11 @@
+file_format: "1"
+id: sparkle
+name: Sparkle
+type: shield
+requires: [seeeduino_xiao_nrf52840]  # あなたのマイコンに合わせて
+features:
+  - keys
+  - display  # もしOLEDなど使うなら。なければ削除
+siblings:
+  - sparkle_left
+  - sparkle_right
