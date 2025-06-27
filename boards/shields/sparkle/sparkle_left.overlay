@@ -1,4 +1,4 @@
-#include "my_keyboard.dtsi"  // 共通の.dtsiファイルを読み込み
+#include "sparkle.dtsi"  // 共通の.dtsiファイルを読み込み
 
 &kscan0 {
     compatible = "zmk,kscan-gpio-matrix";
