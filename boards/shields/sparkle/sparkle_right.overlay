@@ -1,4 +1,4 @@
-#include "my_keyboard.dtsi"
+#include "sparkle.dtsi"
 
 &default_transform {
     col-offset = <7>;
