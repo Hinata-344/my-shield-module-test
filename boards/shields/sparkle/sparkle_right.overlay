@@ -5,9 +5,8 @@
 };
 
 &kscan0 {
-    matrix = <&matrix_transform>;  // ここを修正
     compatible = "zmk,kscan-gpio-matrix";
-    diode-direction = "row2col";  // 必要に応じて col2row に変更
+    diode-direction = "row2col";
     wakeup-source;
 
     row-gpios = <&gpio1 15 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
