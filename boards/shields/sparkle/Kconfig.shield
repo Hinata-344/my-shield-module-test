@@ -2,6 +2,20 @@
 config SHIELD_SPARKLE_LEFT
     def_bool $(shields_list_contains,sparkle_left)
 
-# No whitespace after the comma or in your part name!
 config SHIELD_SPARKLE_RIGHT
     def_bool $(shields_list_contains,sparkle_right)
+
+
+# ============================
+# Add custom split definitions
+# ============================
+
+config ZMK_SPLIT_ROLE_PERIPHERAL
+    bool "Set role as BLE peripheral (slave)"
+    depends on ZMK_SPLIT
+    default n
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    bool "Set role as BLE central (master)"
+    depends on ZMK_SPLIT
+    default n
