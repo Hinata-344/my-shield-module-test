@@ -3,8 +3,7 @@
         compatible = "zmk,physical-layout";
         display-name = "Sparkle"; // ← これを追加！
         transform = <&matrix_transform>;          // ← 今回これを追加
-
-        kscan = &kscan0;
+        kscan = <&kscan0>;
 
         rows = <3>;
         cols = <14>;
