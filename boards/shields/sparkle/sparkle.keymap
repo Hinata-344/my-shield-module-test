@@ -3,8 +3,7 @@
 
 /{
 keymap {
-        compatible = "zmk,keymap";
-        default-layer = 0;
+        compatible = "zmk,keymap"
 
         layers {
             l1 {
