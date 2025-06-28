@@ -1,14 +1,10 @@
 / {
     physical_layout0: physical_layout_0 {
         compatible = "zmk,physical-layout";
-        display-name = "Sparkle"; // ← これを追加！
-        transform = <&matrix_transform>;          // ← 今回これを追加
-        kscan = <&kscan0>;
+        display-name = "Sparkle";           // 必須
+        transform = <&matrix_transform>;    // 必須
+        kscan = <&kscan0>;                  // 必須
 
-        rows = <3>;
-        cols = <14>;
-
-        // 各キーの物理座標 (x, y) を指定
         key-positions = <
             // row 0
             0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0 10 0 11 0 12 0 13 0
