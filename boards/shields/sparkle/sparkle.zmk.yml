@@ -2,7 +2,7 @@ file_format: "1"
 id: sparkle
 name: Sparkle
 type: shield
-requires: [seeeduino_xiao_nrf52840]  # あなたのマイコンに合わせて
+requires: [seeeduino_xiao_ble]  # あなたのマイコンに合わせて
 features:
   - keys
 siblings:
