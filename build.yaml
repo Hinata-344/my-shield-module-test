@@ -17,9 +17,5 @@
 #     cmake-args: -DCONFIG_ZMK_STUDIO=y
 #     artifact-name: corne_left_with_studio
 #
----
-- shield: sparkle_left
-  board: seeeduino_xiao_nrf52840
-
-- shield: sparkle_right
-  board: seeeduino_xiao_nrf52840
+board: [seeeduino_xiao_nrf52840]
+shield: [sparkle_left, sparkle_right]
