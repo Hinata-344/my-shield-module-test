@@ -1,9 +1,8 @@
 #include "sparkle.dtsi"  // 共通の.dtsiファイルを読み込み
 
 &kscan0 {
-    matrix = <&matrix_transform>;  // ここがポイント
     compatible = "zmk,kscan-gpio-matrix";
-    diode-direction = "row2col";  // 必要に応じて変更
+    diode-direction = "row2col";
     wakeup-source;
 
     row-gpios = <&gpio0 10 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
