@@ -18,6 +18,4 @@
 #     artifact-name: corne_left_with_studio
 
 board: [seeeduino_xiao_ble]
-shield: [sparkle_left, sparkle_right]
-board: nice_nano_v2
-shield: settings_reset
+shield: [sparkle_left, sparkle_right, settings_reset]
