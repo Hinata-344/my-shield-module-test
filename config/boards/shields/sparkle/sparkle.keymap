@@ -2,6 +2,12 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+  behaviors {
+    settings_reset: settings_reset {
+      compatible = "zmk,behavior-reset-settings";
+      label = "RESET_SETTINGS";
+    };
+
     keymap {
         compatible = "zmk,keymap";
         layout = <&physical_layout0>;
