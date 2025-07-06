@@ -17,7 +17,8 @@
 #     cmake-args: -DCONFIG_ZMK_STUDIO=y
 #     artifact-name: corne_left_with_studio
 #
-include:
+matrix:
+  board_shield:
   - board: [seeeduino_xiao_ble]
     shield: [sparkle_left, sparkle_right]
   - board: nice_nano_v2
