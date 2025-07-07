@@ -1,3 +1,4 @@
+#include "sparkle.dtsi"         // 中身が空でもOK
 #include "sparkle_left.dtsi"  // 共通の.dtsiファイルを読み込み
 
 &kscan0 {
