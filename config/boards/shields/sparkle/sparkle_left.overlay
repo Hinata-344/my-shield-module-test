@@ -1,4 +1,4 @@
-#include "sparkle.dtsi"  // 共通の.dtsiファイルを読み込み
+#include "sparkle_left.dtsi"  // 共通の.dtsiファイルを読み込み
 
 &kscan0 {
     compatible = "zmk,kscan-gpio-matrix";
