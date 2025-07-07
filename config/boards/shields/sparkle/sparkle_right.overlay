@@ -1,4 +1,4 @@
-#include "sparkle.dtsi"
+#include "sparkle_right.dtsi"
 
 &matrix_transform {
     col-offset = <7>;
