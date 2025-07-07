@@ -1,3 +1,4 @@
+#include "sparkle.dtsi"         // 中身が空でもOK
 #include "sparkle_right.dtsi"
 
 &matrix_transform {
