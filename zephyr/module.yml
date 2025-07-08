@@ -1,3 +1,4 @@
-name: my-shield-module-test
+name: zmk-keyboard-sparkle
 build:
-  cmake: config/boards
+  settings:
+    board_root: .
