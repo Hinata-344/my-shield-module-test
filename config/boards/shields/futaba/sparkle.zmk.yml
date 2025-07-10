@@ -5,7 +5,7 @@ file_format: "1"
 id: sparkle
 
 # シールドの表示名（GUIやエディタで使われる）
-name: Sparkle
+name: SPARKLE
 
 # シールドの種類を指定（ここでは `shield` → ハードウェア構成の定義）
 type: shield
