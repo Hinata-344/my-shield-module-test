@@ -1,11 +1,26 @@
+# このファイルのバージョン（ZMKでは現行バージョン "1" が一般的）
 file_format: "1"
+
+# このシールドの識別ID（ビルドや設定で使用）
 id: futaba
+
+# シールドの表示名（GUIやエディタで使われる）
 name: Futaba
+
+# シールドの種類を指定（ここでは `shield` → ハードウェア構成の定義）
 type: shield
+
+# このシールドに関するURL（Gitリポジトリやドキュメントへのリンク）
 url: https://codeberg.org/konohana/zmk-config-futaba
+
+# このシールドのビルドや実行に必要なボード名（Seeeduino XIAO BLEを前提としている）
 requires: [seeeduino_xiao_ble]
+
+# このシールドが提供する機能。`keys` は物理キースイッチが含まれていることを示す
 features:
   - keys
+
+# このシールドが内包する兄弟（左右分割構成などで用いる）
 siblings:
   - futaba_left
   - futaba_right
