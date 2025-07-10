@@ -8,7 +8,7 @@
     // キーマップを定義するノード
     keymap {
         compatible = "zmk,keymap";  // ZMKがキーマップとして認識するための識別子
-
+ 
         // デフォルトレイヤー（電源ON時やリセット後に使われる基本層）
         default_layer {
             bindings = <
