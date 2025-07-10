@@ -13,7 +13,7 @@
     // 実際の物理レイアウトの定義
     physical_layout0: physical_layout0 {
         compatible = "zmk,physical-layout";  // ZMKが物理レイアウトとして認識するための互換名
-        display-name = "Futaba Keyboard";  // GUI表示などでのキーボード名
+        display-name = "SPARKLE Keyboard";  // GUI表示などでのキーボード名
         kscan = <&kscan0>;  // スキャン対象のキーマトリクスノード
         transform = <&default_transform>;  // 論理キー→物理キーの変換ルールを指定
 
