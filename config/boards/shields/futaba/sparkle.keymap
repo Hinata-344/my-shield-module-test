@@ -12,16 +12,17 @@
         // デフォルトレイヤー（電源ON時やリセット後に使われる基本層）
         default_layer {
             bindings = <
-                &kp A &kp B &kp BACKSPACE &kp ENTER     // 上段: A B ⌫ ⏎
-                &kp C &kp D &kp SPACE     &mo 1         // 下段: C D Space → モーメンタリレイヤー1へ切替
+                &kp ESC     &kp Q     &kp W     &kp E     &kp R     &kp T     &kp LSHIFT    &mo 1        &kp Y     &kp U     &kp I     &kp O     &kp P      &kp LANG2
+                &kp LALT    &kp A     &kp S     &kp D     &kp F     &kp G     &kp SPACE     &kp ENTER    &kp H     &kp J     &kp K     &kp L     &kp LPAR   &kp LANG1
+                &kp LGUI    &kp Z     &kp X     &kp C     &kp V     &kp B     &kp TAB       &kp BSPC     &kp N     &kp M     &kp COMMA &kp DOT   &kp RPAR   &kp LCTRL
             >;
         };
 
-        // Bluetooth操作専用のレイヤー（レイヤー番号は任意、ここでは "1" に対応）
-        bt_layer {
+        layer_1 {
             bindings = <
-                &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_CLR        &bt BT_CLR_ALL  // 上段：BTデバイス選択0/1、ペアリング解除、全解除
-                &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_NXT         &kp N0          // 下段：BTデバイス2/3、次のBTスロット、数字0
+                &kp ESC     &kp Q     &kp W     &kp E     &kp R     &kp T     &kp LSHIFT    &mo 1        &kp Y     &kp U     &kp I     &kp O     &kp P      &kp LANG2
+                &kp LALT    &kp A     &kp S     &kp D     &kp F     &kp G     &kp SPACE     &kp ENTER    &kp H     &kp J     &kp K     &kp L     &kp LPAR   &kp LANG1
+                &kp LGUI    &kp Z     &kp X     &kp C     &kp V     &kp B     &kp TAB       &kp BSPC     &kp N     &kp M     &kp COMMA &kp DOT   &kp RPAR   &kp LCTRL
             >;
         };
     };
