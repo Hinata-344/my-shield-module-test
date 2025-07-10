@@ -1,7 +1,7 @@
 # Futaba の左側シールド（futaba_left）がビルド時に指定されていたら true にするシンボル
-config SHIELD_FUTABA_LEFT
-    def_bool $(shields_list_contains,futaba_left)
+config SHIELD_SPARKLE_LEFT
+    def_bool $(shields_list_contains,sparkle_left)
 
 # Futaba の右側シールド（futaba_right）がビルド時に指定されていたら true にするシンボル
-config SHIELD_FUTABA_RIGHT
-    def_bool $(shields_list_contains,futaba_right)
+config SHIELD_SPARKLE_RIGHT
+    def_bool $(shields_list_contains,sparkle_right)
