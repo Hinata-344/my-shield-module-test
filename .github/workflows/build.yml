@@ -29,10 +29,8 @@ jobs:
           path: config
 
       - name: Init west workspace
-        run: |
-          west init -l zmk
-          west update
-        working-directory: ${{ github.workspace }}
+        run: west init -l zmk && west update
+        working-directory: ${{ github.workspace }}  # zmk の1つ上のディレクトリ
 
       - name: Build left
         run: |
