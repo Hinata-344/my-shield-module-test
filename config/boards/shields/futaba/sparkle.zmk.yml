@@ -2,16 +2,16 @@
 file_format: "1"
 
 # このシールドの識別ID（ビルドや設定で使用）
-id: futaba
+id: sparkle
 
 # シールドの表示名（GUIやエディタで使われる）
-name: Futaba
+name: Sparkle
 
 # シールドの種類を指定（ここでは `shield` → ハードウェア構成の定義）
 type: shield
 
 # このシールドに関するURL（Gitリポジトリやドキュメントへのリンク）
-url: https://codeberg.org/konohana/zmk-config-futaba
+url: https://github.com/Hinata-344/my-shield-module-test/tree/byHutabaForMe
 
 # このシールドのビルドや実行に必要なボード名（Seeeduino XIAO BLEを前提としている）
 requires: [seeeduino_xiao_ble]
@@ -22,5 +22,5 @@ features:
 
 # このシールドが内包する兄弟（左右分割構成などで用いる）
 siblings:
-  - futaba_left
-  - futaba_right
+  - sparkle_left
+  - sparkle_right
