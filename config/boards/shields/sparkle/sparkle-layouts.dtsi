@@ -1,9 +1,0 @@
-/ {
-    physical_layout0: physical_layout_0 {
-        compatible = "zmk,physical-layout";
-        display-name = "Sparkle";           // 必須
-        transform = <&matrix_transform>;    // 必須
-        kscan = <&kscan0>;                  // 必須
-
-    };
-};
