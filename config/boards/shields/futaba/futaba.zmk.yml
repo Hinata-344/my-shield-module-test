@@ -1,0 +1,11 @@
+file_format: "1"
+id: futaba
+name: Futaba
+type: shield
+url: https://codeberg.org/konohana/zmk-config-futaba
+requires: [seeeduino_xiao_ble]
+features:
+  - keys
+siblings:
+  - futaba_left
+  - futaba_right
