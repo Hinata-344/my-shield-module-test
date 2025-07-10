@@ -1,21 +1,27 @@
+// 標準的なキーマップのビヘイビア定義を読み込み
 #include <behaviors.dtsi>
+
+// Bluetooth 関連のビヘイビア（BT_SEL, BT_CLR など）を使うための定義を読み込み
 #include <dt-bindings/zmk/bt.h>
 
 / {
+    // キーマップを定義するノード
     keymap {
-        compatible = "zmk,keymap";
+        compatible = "zmk,keymap";  // ZMKがキーマップとして認識するための識別子
 
+        // デフォルトレイヤー（電源ON時やリセット後に使われる基本層）
         default_layer {
             bindings = <
-                &kp A &kp B &kp BACKSPACE &kp ENTER
-                &kp C &kp D &kp SPACE     &mo 1
+                &kp A &kp B &kp BACKSPACE &kp ENTER     // 上段: A B ⌫ ⏎
+                &kp C &kp D &kp SPACE     &mo 1         // 下段: C D Space → モーメンタリレイヤー1へ切替
             >;
         };
 
+        // Bluetooth操作専用のレイヤー（レイヤー番号は任意、ここでは "1" に対応）
         bt_layer {
             bindings = <
-                &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_CLR  &bt BT_CLR_ALL
-                &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_NXT  &kp N0 
+                &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_CLR        &bt BT_CLR_ALL  // 上段：BTデバイス選択0/1、ペアリング解除、全解除
+                &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_NXT         &kp N0          // 下段：BTデバイス2/3、次のBTスロット、数字0
             >;
         };
     };
