@@ -1,5 +1,5 @@
 // 共通のFutaba設定を読み込む（物理レイアウトやkscan0の基本設定など）
-#include "futaba.dtsi"
+#include "sparkle.dtsi"
 
 // default_transform（キー行列の物理→論理変換ルール）を修正
 &default_transform {
