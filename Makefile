@@ -23,18 +23,18 @@ build: $(TARGET_LEFT) $(TARGET_RIGHT)
 $(TARGET_LEFT): $(SRCS_LEFT)
 	# Docker内でZMKビルド実行。ビルドディレクトリは build/left
 	# ボードは seeeduino_xiao_ble
-	# SHIELDを futaba_left に指定し、ZMK設定ディレクトリをマウント
-	docker exec -w /workspaces/zmk/app -it $(container_name) west build -d build/left -b seeeduino_xiao_ble -S studio-rpc-usb-uart -- -DSHIELD=futaba_left -DZMK_CONFIG="/workspaces/zmk-config/config" -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_STUDIO_LOCKING=n
+	# SHIELDを sparkle_left に指定し、ZMK設定ディレクトリをマウント
+	docker exec -w /workspaces/zmk/app -it $(container_name) west build -d build/left -b seeeduino_xiao_ble -S studio-rpc-usb-uart -- -DSHIELD=sparkle_left -DZMK_CONFIG="/workspaces/zmk-config/config" -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_STUDIO_LOCKING=n
 	# ビルド成果物UF2ファイルをコピーしてわかりやすくリネーム
-	docker exec -w /workspaces/zmk/app -it $(container_name) cp build/left/zephyr/zmk.uf2 build/futaba_left.uf2
+	docker exec -w /workspaces/zmk/app -it $(container_name) cp build/left/zephyr/zmk.uf2 build/sparkle_left.uf2
 
 # 右用ターゲットのビルドルール
 $(TARGET_RIGHT): $(SRCS_RIGHT)
 	# Docker内で右用ビルドを実行（build/right）
-	# SHIELDを futaba_right に切り替えてビルド
-	docker exec -w /workspaces/zmk/app -it $(container_name) west build -d build/right -b seeeduino_xiao_ble -- -DSHIELD=futaba_right -DZMK_CONFIG="/workspaces/zmk-config/config"
+	# SHIELDを sparkle_right に切り替えてビルド
+	docker exec -w /workspaces/zmk/app -it $(container_name) west build -d build/right -b seeeduino_xiao_ble -- -DSHIELD=sparkle_right -DZMK_CONFIG="/workspaces/zmk-config/config"
 	# 右用UF2もコピーしてわかりやすくリネーム
-	docker exec -w /workspaces/zmk/app -it $(container_name) cp build/right/zephyr/zmk.uf2 build/futaba_right.uf2
+	docker exec -w /workspaces/zmk/app -it $(container_name) cp build/right/zephyr/zmk.uf2 build/sparkle_right.uf2
 
 # clean タスクはDocker内のビルド成果物ディレクトリを丸ごと削除してクリーンアップ
 clean:
