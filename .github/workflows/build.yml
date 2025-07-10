@@ -1,10 +1,34 @@
 name: Build ZMK firmware
 
-on: [push, pull_request, workflow_dispatch]
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
 
 jobs:
   build:
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
-    with:
-      config-path: config
-      shields: sparkle
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout ZMK main
+        uses: actions/checkout@v3
+        with:
+          repository: zmkfirmware/zmk
+          path: zmk
+
+      - name: Checkout your config repo
+        uses: actions/checkout@v3
+        with:
+          path: config
+
+      - name: Build left
+        run: |
+          west init -l zmk
+          west update
+          west build -s zmk/app -d build/left -b seeeduino_xiao_ble -- -DSHIELD=sparkle_left -DZMK_CONFIG=../config/config
+        working-directory: ${{ github.workspace }}
+
+      - name: Build right
+        run: |
+          west build -s zmk/app -d build/right -b seeeduino_xiao_ble -- -DSHIELD=sparkle_right -DZMK_CONFIG=../config/config
+        working-directory: ${{ github.workspace }}
