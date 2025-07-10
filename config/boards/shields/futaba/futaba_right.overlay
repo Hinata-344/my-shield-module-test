@@ -1,12 +1,16 @@
+// 共通のFutaba設定を読み込む（物理レイアウトやkscan0の基本設定など）
 #include "futaba.dtsi"
 
+// default_transform（キー行列の物理→論理変換ルール）を修正
 &default_transform {
+    // 列のオフセットを2列分ずらす（論理配列のマッピングを右に2列ずらす）
     col-offset = <2>;
 };
 
+// kscan0（キーマトリクススキャン）の列GPIOを上書き（または追記）
 &kscan0 {
     col-gpios
-        = <&xiao_d 0 GPIO_ACTIVE_HIGH>
-        , <&xiao_d 1 GPIO_ACTIVE_HIGH>
+        = <&xiao_d 0 GPIO_ACTIVE_HIGH>  // 列0：XIAOのD0ピン
+        , <&xiao_d 1 GPIO_ACTIVE_HIGH>  // 列1：XIAOのD1ピン
         ;
 };
