@@ -1,15 +1,20 @@
+# 左側のFutabaシールドが指定されている場合の設定
 if SHIELD_FUTABA_LEFT
 
+# ZMK上でこのキーボードの名前として "Futaba Keyboard" を設定
 config ZMK_KEYBOARD_NAME
     default "Futaba Keyboard"
 
+# 左側をスプリットキーボードの「中央（central）」として動作させる
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
 endif
 
+# 左側または右側のFutabaシールドが指定されている場合の設定
 if SHIELD_FUTABA_LEFT || SHIELD_FUTABA_RIGHT
 
+# スプリットキーボード機能（無線左右通信）を有効にする
 config ZMK_SPLIT
     default y
 
