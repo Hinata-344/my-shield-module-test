@@ -1,5 +1,5 @@
 // Futaba用の共通定義（キーマトリクス、物理レイアウト、エンコーダなど）をインクルード
-#include "futaba.dtsi"
+#include "sparkle.dtsi"
 
 // 既に定義されている kscan0 ノード（GPIOマトリクススキャン）を上書き／拡張
 &kscan0 {
