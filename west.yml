@@ -1,0 +1,18 @@
+manifest:
+  version: 0.11.0
+  remotes:
+    - name: zephyrproject
+      url: https://github.com/zephyrproject-rtos/zephyr.git
+    - name: zmk
+      url: https://github.com/zmkfirmware/zmk.git
+  projects:
+    - name: zephyr
+      remote: zephyrproject
+      revision: main
+      path: zephyr
+    - name: zmk
+      remote: zmk
+      revision: main
+      path: zmk
+  self:
+    path: .
