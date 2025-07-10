@@ -1,8 +1,10 @@
+// Futaba用の共通定義（キーマトリクス、物理レイアウト、エンコーダなど）をインクルード
 #include "futaba.dtsi"
 
+// 既に定義されている kscan0 ノード（GPIOマトリクススキャン）を上書き／拡張
 &kscan0 {
+    // 列ピンのGPIOを定義（キー列のスキャン対象）
     col-gpios
-        = <&xiao_d 0 GPIO_ACTIVE_HIGH>
-        , <&xiao_d 1 GPIO_ACTIVE_HIGH>
-        ;
+        = <&xiao_d 0 GPIO_ACTIVE_HIGH>  // 列0：XIAO D0ピン（アクティブHigh）
+        , <&xiao_d 1 GPIO_ACTIVE_HIGH>; // 列1：XIAO D1ピン（アクティブHigh）
 };
