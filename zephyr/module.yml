@@ -1,4 +1,0 @@
-name: zmk-keyboard-sparkle
-build:
-  settings:
-    board_root: .
