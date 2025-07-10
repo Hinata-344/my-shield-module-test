@@ -5,6 +5,11 @@
 &kscan0 {
     // 列ピンのGPIOを定義（キー列のスキャン対象）
     col-gpios
-        = <&xiao_d 0 GPIO_ACTIVE_HIGH>  // 列0：XIAO D0ピン（アクティブHigh）
-        , <&xiao_d 1 GPIO_ACTIVE_HIGH>; // 列1：XIAO D1ピン（アクティブHigh）
+        = <&xiao_d 3 GPIO_ACTIVE_HIGH>  // 列0：XIAO D4ピン（アクティブHigh）
+        , <&xiao_d 4 GPIO_ACTIVE_HIGH>
+        , <&xiao_d 5 GPIO_ACTIVE_HIGH>
+        , <&xiao_d 6 GPIO_ACTIVE_HIGH>
+        , <&xiao_d 7 GPIO_ACTIVE_HIGH>
+        , <&xiao_d 8 GPIO_ACTIVE_HIGH>
+        , <&xiao_d 9 GPIO_ACTIVE_HIGH>;
 };
