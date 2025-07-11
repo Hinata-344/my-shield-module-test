@@ -5,3 +5,4 @@ config SHIELD_SPARKLE_LEFT
 # Futaba の右側シールド（futaba_right）がビルド時に指定されていたら true にするシンボル
 config SHIELD_SPARKLE_RIGHT
     def_bool $(shields_list_contains,sparkle_right)
+  
